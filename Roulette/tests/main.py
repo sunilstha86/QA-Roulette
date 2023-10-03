@@ -59,48 +59,4 @@ def drivers(request):
     yield
     request.cls.altunity_driver.stop()
     request.cls.appium_driver.quit()
-
-# from appium import webdriver
-# from alttester import AltDriver
-
-# class TestStartScene:
-
-#     @classmethod
-#     def setUpClass(cls):
-#         # Set up desired capabilities for Appium
-#         desired_caps = {
-#             'platformName': 'Android',
-#             'deviceName': 'Samsung Galaxy',
-#             'app': '/Users/sunilshrestha/Downloads/roulette-Unity-develop/Roulette.apk',
-#             'automationName': 'UiAutomator2',
-#             'appium:ignoreHiddenApiPolicyError': True,
-#             'appium:AppActivity': 'com.unity3d.player.UnityPlayerActivity',
-#             'appium:altUnityPort': '13000',
-#             'appium:altUnityHost': '127.0.0.1',
-#         }
-
-#         # Initialize Appium driver
-#         cls.driver = webdriver.Remote('http://127.0.0.1:4723/wd/hub', desired_caps)
-#         print("Roulette Application started")
-
-#     @classmethod
-#     def tearDownClass(cls):
-#         # Quit Appium driver
-#         cls.driver.quit()
-
-#     def test_start_scene(self):
-#         # Interact with UI elements using Appium
-#         el1 = self.driver.find_element_by_accessibility_id("Game view")
-#         el1.click()
-#         print("Clicked on the game")
-
-#         # Initialize AltUnityDriver
-#         self.alt_driver = AltDriver("127.0.0.1", 13000)
-
-#     def tearDown(self):
-#         # Stop AltUnityDriver
-#         self.alt_driver.stop()
-
-# if __name__ == '__main__':
-#     import unittest
-#     unittest.main()
+    
